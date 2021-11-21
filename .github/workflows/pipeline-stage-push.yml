@@ -1,11 +1,9 @@
 
-name: Node.js CI workflow
+name: Stage, On PUSH NodeJS CI/CD pipeline for Angular
 
 on:
-  pull_request:
-    branches: [ master ]
   push:
-    branches: [ master ]
+    branches: [ stage ]
 
 jobs:
   
@@ -48,7 +46,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: ${{ secrets.DOCKER_IMAGE }}
-        tags: latest
+        tags: stage
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
