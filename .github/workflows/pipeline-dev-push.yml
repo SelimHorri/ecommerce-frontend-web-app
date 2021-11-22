@@ -1,9 +1,7 @@
 
-name: Node.js CI workflow
+name: Develop, On PUSH NodeJS CI/CD pipeline for Angular
 
 on:
-  pull_request:
-    branches: [ develop ]
   push:
     branches: [ develop ]
 
