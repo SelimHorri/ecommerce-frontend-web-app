@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: "http://localhost:8080/app"
+  apiUrl: "http://localhost:8080/app",
+  jwtToken: "jwtToken"
 };

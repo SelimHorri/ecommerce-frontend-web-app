@@ -23,7 +23,7 @@ export class AuthenticationService {
   }
   
   public isLoggedIn(): boolean {
-    return !(sessionStorage.getItem("username") === null);
+    return !(sessionStorage.getItem(environment.jwtToken) === null);
   }
   
   public logout(): boolean {
