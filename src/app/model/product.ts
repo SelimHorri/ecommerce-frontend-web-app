@@ -14,6 +14,10 @@ export class Product {
     
   }
   
+  public toString(): string {
+    return `Product: { productId: ${this.productId}, productTitle: ${this.productTitle}, imageUrl: ${this.imageUrl}, sku: ${this.sku}, priceUnit: ${this.priceUnit}, quantity: ${this.quantity}, categoryId: ${this.category!.categoryId} }`;
+  }
+  
   
   
 }
