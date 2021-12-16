@@ -22,6 +22,20 @@ export class AuthenticationService {
     return this.http.post<AuthenticationResponse>(this.apiUrl, authenticationRequest);
   }
   
+  public isLoggedIn(): boolean {
+    return !(sessionStorage.getItem("username") === null);
+  }
+  
+  public logout(): boolean {
+    
+    if (this.isLoggedIn()) {
+      sessionStorage.clear();
+      return true;
+    }
+    
+    return false;
+  }
+  
   
   
 }
